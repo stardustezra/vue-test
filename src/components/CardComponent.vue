@@ -20,7 +20,7 @@ import { ref } from "vue";
 import cover from "../assets/images/Cover.png";
 
 // Props
-const props = defineProps({
+defineProps({
   title: String,
 });
 
@@ -50,10 +50,5 @@ const backgroundUrl = ref(cover); // Bind imported image to background URL
   text-transform: uppercase;
 }
 
-.card-body {
-}
 
-.card-footer {
-  /* Footer styles */
-}
 </style>

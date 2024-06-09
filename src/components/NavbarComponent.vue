@@ -47,8 +47,6 @@
 import { ref } from "vue";
 
 const isOpen = ref(false);
-const authenticated = ref(false);
-
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
@@ -161,111 +159,36 @@ nav {
   list-style: none;
   cursor: pointer;
   font-weight: 600;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
-  font-size: 12px;
 }
 
-.dropdown-menu li:hover .dropdown-menu li:active {
-  background-color: #eee6d1;
-  transition: 0.1s;
+.dropdown-menu li:hover {
+  background-color: #e0e0e0;
 }
 
-/* Initial state of the spans */
-.nav-icon span:nth-child(1) {
-  top: 0px;
-}
-
-.nav-icon span:nth-child(2),
-.nav-icon span:nth-child(3) {
-  top: 14px; /* Juster top positionen af spans */
-}
-
-.nav-icon span:nth-child(4) {
-  top: 28px; /* Juster top positionen af spans */
-}
-
-/* When the menu is open, transform the spans */
-.nav-icon.open span:nth-child(1) {
-  top: 14px; /* Juster top positionen af spans */
+.open span:nth-child(1) {
+  top: 18px;
   width: 0%;
   left: 50%;
 }
 
-.nav-icon.open span:nth-child(2) {
+.open span:nth-child(2) {
   transform: rotate(45deg);
 }
 
-.nav-icon.open span:nth-child(3) {
+.open span:nth-child(3) {
   transform: rotate(-45deg);
 }
 
-.nav-icon.open span:nth-child(4) {
-  top: 14px; /* Juster top positionen af spans */
+.open span:nth-child(4) {
+  top: 18px;
   width: 0%;
   left: 50%;
 }
 
-/* Styling for burger menu */
-.burger-menu {
-  display: none;
-}
-
-.burger-menu .nav-icon {
-  display: block;
-}
-
-@media (max-width: 767px) {
-  .burger-menu {
-    display: block; /* Show burger menu button for screens smaller than 768px */
-  }
-
-  .navigation {
-    display: none; /* Hide navigation links by default on smaller screens */
-  }
-
-  .mobile-menu {
-    display: block; /* Show mobile menu on smaller screens */
-  }
-
-  .nav-icon span {
-    height: 4px; /* Juster tykkelsen efter behov */
-    border-radius: 4px; /* Juster hjørneradius efter behov */
-  }
-
-  .nav-icon span {
-    height: 2px; /* Adjust thickness as needed */
-    width: 25px; /* Adjust width as needed */
-  }
-
-  .nav-icon span:nth-child(1) {
-    top: 6px; /* Juster topafstanden for første span */
-  }
-
-  .nav-icon span:nth-child(2),
-  .nav-icon span:nth-child(3) {
-    top: 16px; /* Juster topafstanden for andet og tredje span */
-  }
-
-  .nav-icon span:nth-child(4) {
-    top: 26px; /* Juster topafstanden for fjerde span */
-  }
-}
-
-@media (min-height: 932px) and (max-height: 932px) {
-  .ticket {
-    width: 25%;
-  }
-}
-
-@media (min-height: 896px) and (max-height: 896px) {
-  .ticket {
-    width: 30%;
-  }
-}
-
-@media (min-height: 740px) and (max-height: 740px) {
-  .ticket {
-    width: 40%;
-  }
+.scrolled-nav {
+  background-color: var(--primary-dark-green);
 }
 </style>

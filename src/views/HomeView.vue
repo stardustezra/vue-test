@@ -1,5 +1,5 @@
 <script setup>
-import Navbar from "../components/Navbar.vue";
+import Navbar from "../components/NavbarComponent.vue";
 import CardComponent from "@/components/CardComponent.vue";
 import LandingpageWelcome from "@/components/LandingpageWelcome.vue";
 </script>
