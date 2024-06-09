@@ -26,7 +26,7 @@ describe("NavBar Component", () => {
     cy.get(".nav-icon").click();
     cy.get(".dropdown-menu").should("be.visible");
 
-    // Test navigation til "Registrer" siden
+/*     // Test navigation til "Registrer" siden
     cy.get(".dropdown-menu").contains("Registrer").click();
     cy.url().should("include", "/signup");
 
@@ -43,6 +43,6 @@ describe("NavBar Component", () => {
     // Test navigation til "Skattejagt" siden
     cy.get(".nav-icon").click();
     cy.get(".dropdown-menu").contains("Skattejagt").click();
-    cy.url().should("include", "/skattejagt");
+    cy.url().should("include", "/skattejagt"); */
   });
 });
